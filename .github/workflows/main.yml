@@ -2,7 +2,7 @@ name: 📢 Notify Discord on Push
 
 on:
   push:
-    branches: [ main ]  # Du kan ændre "main" til "master" hvis dit repo bruger det
+    branches: [ main ]
 
 jobs:
   discord-notify:
@@ -12,8 +12,8 @@ jobs:
         uses: tsickert/discord-webhook@v5
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
-          username: GitHub
           content: |
             📦 Nyt commit i **${{ github.repository }}**
-            🔧 **${{ github.actor }}**: ${{ github.event.head_commit.message }}
-            🔗 [Se ændringer](${{ github.event.head_commit.url }})
+            🧑‍💻 Udført af: **${{ github.actor }}**
+            📝 Besked: _${{ github.event.head_commit.message }}_
+            🔗 [Klik her for at se det](${{ github.event.head_commit.url }})
