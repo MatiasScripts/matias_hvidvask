@@ -1,0 +1,19 @@
+name: 📢 Notify Discord on Push
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  discord-notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send to Discord
+        uses: tsickert/discord-webhook@v5
+        with:
+          webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
+          username: GitHub
+          content: |
+            📦 Nyt commit i **${{ github.repository }}**
+            🔧 **${{ github.actor }}**: ${{ github.event.head_commit.message }}
+            🔗 [Se ændringer](${{ github.event.head_commit.url }})
