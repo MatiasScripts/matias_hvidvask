@@ -31,4 +31,4 @@ Hvis du deler scriptet videre, så sørg for, at det ikke bliver ændret eller d
 Har du spørgsmål eller brug for hjælp, så er du meget velkommen i min Discord-server:  
 **[Matias Scripts | Discord](https://discord.gg/qPj9D2CyUS)**
 
-**God fornøjelse med scriptet! :) **
+**God fornøjelse med scriptet! :)**
