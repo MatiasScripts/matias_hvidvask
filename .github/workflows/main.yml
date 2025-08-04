@@ -12,7 +12,7 @@ jobs:
         uses: tsickert/discord-webhook@v5
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
-          content:
+          content: |
             📦 Nyt commit i **${{ github.repository }}**
             🧑‍💻 Udført af: **${{ github.actor }}**
             📝 Besked: _${{ github.event.head_commit.message }}_
